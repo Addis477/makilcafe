@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ማኪል ማዕድ - አድራሻ፣ ስልክ ቁጥር እና የማግኛ መረጃ">
+    <title>አድራሻ | ማኪል ማዕድ | የፍስክ ምግብ ቁርስ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-transition"></div>
+
+<a href="https://wa.me/251974956864" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">በዋትስአፕ ያዝዙ</span>
+</a>
+
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header"><h3>🍛 ማኪል ማዕድ</h3><button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button></div>
+    <div class="sidebar-nav">
+        <a href="index.html"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        <a href="about.html"><i class="fas fa-heart"></i> ስለእኛ</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> ምናሌ</a>
+        <a href="catering.html"><i class="fas fa-champagne-glasses"></i> የዝግጅት</a>
+        <a href="order.html"><i class="fas fa-shopping-bag"></i> ማዘዣ</a>
+        <a href="contact.html" class="active"><i class="fas fa-map-pin"></i> አድራሻ</a>
+    </div>
+    <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    <div class="sidebar-footer"><p><i class="fas fa-phone"></i> 0974 956864</p><p><i class="fas fa-envelope"></i> makilmead@gmail.com</p></div>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<header class="main-header">
+    <div class="container">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="logo"><a href="index.html"><h1>🍛 ማኪል ማዕድ</h1><span>የፍስክ ምግብ ቁርስ</span></a></div>
+        <nav class="desktop-nav">
+            <a href="index.html">ዋና ገጽ</a>
+            <a href="about.html">ስለእኛ</a>
+            <a href="menu.html">ምናሌ</a>
+            <a href="catering.html">የዝግጅት</a>
+            <a href="order.html">ማዘዣ</a>
+            <a href="contact.html" class="active">አድራሻ</a>
+        </nav>
+        <a href="order.html" class="btn-order"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=800&fit=crop');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content">
+            <h1>አድራሻ</h1>
+            <p>እንገናኝ</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card"><div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div><h3>አድራሻ</h3><p>አዲስ አበባ፣ ኢትዮጵያ</p></div>
+                <div class="contact-card"><div class="icon-circle"><i class="fas fa-phone-alt"></i></div><h3>ስልክ</h3><p>0974 956864</p></div>
+                <div class="contact-card"><div class="icon-circle"><i class="fas fa-envelope"></i></div><h3>ኢሜይል</h3><p>makilmead@gmail.com</p></div>
+                <div class="contact-card"><div class="icon-circle"><i class="fab fa-instagram"></i></div><h3>ኢንስታግራም</h3><p>@makilmead</p></div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link ig"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link tg"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="social-link tt"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <div id="map"></div>
+
+            <!-- Bank & Telebirr Section -->
+            <div class="payment-info-section">
+                <div class="payment-row">
+                    <div class="payment-box">
+                        <i class="fas fa-university"></i>
+                        <h3>የባንክ መለያ</h3>
+                        <p>አዋሽ ባንክ</p>
+                        <p class="account-number">0135274695001</p>
+                        <p>ስም: ማኪል ማዕድ ትሬዲንግ</p>
+                    </div>
+                    <div class="payment-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>ቴሌ ብር</h3>
+                        <p>በቴሌ ብር መክፈል ይችላሉ</p>
+                        <p class="account-number">0974 956864</p>
+                        <p>ወይም በአፕሊኬሽኑ ይፈልጉ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>መልዕክት ይላኩልን</h3>
+                <div class="form-row">
+                    <input type="text" id="contactName" placeholder="ስምዎ" required>
+                    <input type="email" id="contactEmail" placeholder="ኢሜይልዎ" required>
+                </div>
+                <textarea rows="4" id="contactMsg" placeholder="መልዕክትዎ"></textarea>
+                <button id="sendContactBtn">መልዕክት ይላኩ</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo">🍛 ማኪል ማዕድ</div><p class="tagline">የፍስክ ምግብ ቁርስ</p></div><div class="footer-col"><h4>ፈጣን አገናኝ</h4><ul><li><a href="index.html">ዋና ገጽ</a></li><li><a href="menu.html">ምናሌ</a></li><li><a href="order.html">ማዘዣ</a></li></ul></div><div class="footer-col"><h4>ደውሉልን</h4><ul><li><i class="fas fa-phone"></i> 0974 956864</li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 ማኪል ማዕድ — የፍስክ ምግብ ቁርስ 🍛</p></div></div></footer>
+
+<div id="toastMsg" class="toast-msg">✓ መልዕክት ተልኳል</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+    const map = L.map('map').setView([9.02497, 38.74689], 14);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+    L.marker([9.02497, 38.74689]).addTo(map).bindPopup('🍛 ማኪል ማዕድ<br>አዲስ አበባ፣ ኢትዮጵያ');
+
+    document.getElementById('sendContactBtn')?.addEventListener('click', function() {
+        const name = document.getElementById('contactName')?.value.trim();
+        if (!name) { showToast('⚠️ እባክዎ ስምዎን ያስገቡ'); return; }
+        showToast('✓ መልዕክትዎ ተልኳል! በቅርቡ እንመልሳለን።');
+        document.getElementById('contactName').value = '';
+        document.getElementById('contactEmail').value = '';
+        document.getElementById('contactMsg').value = '';
+    });
+</script>
+</body>
+</html>
