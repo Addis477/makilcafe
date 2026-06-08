@@ -1,7 +1,7 @@
 /* ============================================
-   ማኪል ማዕድ - MAKIL MEAD
+   ማኪል ማዕድ - MAKIL MEAD - COMPLETE STYLESHEET
    የፍስክ ምግብ ቁርስ | Premium Ethiopian Restaurant
-   Warm Ethiopian Theme | Red & Gold Accents
+   Red & Gold Ethiopian Theme | Fully Responsive
    ============================================ */
 
 :root {
@@ -407,7 +407,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* ========== CATEGORY STYLES ========== */
+/* ========== CATEGORY BUTTONS (HOME PAGE) ========== */
 .category-wrapper {
     background: linear-gradient(135deg, #FFF8F0 0%, #F5EDE3 100%);
     padding: 20px 0;
@@ -464,6 +464,48 @@ body {
 
 .cat-btn.active i {
     color: white;
+}
+
+/* ========== HORIZONTAL CATEGORY NAVIGATION (MENU PAGE) - NORMAL SIZE ========== */
+.menu-category-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0 40px;
+    padding: 0 20px;
+}
+
+.menu-cat-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: white;
+    border: 1.5px solid #8B0000;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #8B0000;
+}
+
+.menu-cat-btn i {
+    font-size: 0.85rem;
+}
+
+.menu-cat-btn:hover {
+    background: #8B0000;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(139,0,0,0.2);
+}
+
+.menu-cat-btn.active {
+    background: #8B0000;
+    color: white;
+    box-shadow: 0 2px 8px rgba(139,0,0,0.2);
 }
 
 /* ========== SECTION TITLES ========== */
@@ -588,45 +630,68 @@ body {
 }
 
 .menu-category {
-    margin-bottom: 50px;
     background: white;
-    border-radius: 24px;
-    padding: 25px;
-    box-shadow: var(--shadow);
+    border-radius: 20px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     border: 1px solid #E8DCCC;
 }
 
+.menu-category-header {
+    background: linear-gradient(135deg, #8B0000, #A52A2A);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-category-header i {
+    font-size: 1.4rem;
+    color: #FFD700;
+}
+
 .menu-category-title {
-    font-size: 1.5rem;
-    color: #8B0000;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #D4A34B;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0;
     font-family: 'Playfair Display', serif;
 }
 
 .menu-items-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 12px;
+    gap: 6px;
+    padding: 16px;
 }
 
 .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 14px;
     border-bottom: 1px dashed #E8DCCC;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: #FFF8F0;
+    transform: translateX(3px);
 }
 
 .menu-item span:first-child {
     font-weight: 500;
     color: #3E1F0D;
+    font-size: 0.9rem;
 }
 
 .menu-item span:last-child {
-    font-weight: 600;
+    font-weight: 700;
     color: #8B0000;
+    background: #FFF0E8;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 0.85rem;
 }
 
 /* ========== CATERING PAGE ========== */
@@ -786,6 +851,291 @@ body {
 .feature-card p {
     color: #8B6340;
     font-size: 0.85rem;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #8B0000, #D4A34B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #8B6340;
+    line-height: 1.7;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8B0000, #D4A34B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: block;
+}
+
+.about-values h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #8B0000;
+}
+
+.about-values ul {
+    list-style: none;
+}
+
+.about-values li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #8B6340;
+}
+
+.about-values li i {
+    color: #4CAF50;
+    width: 24px;
+}
+
+.quote-section {
+    padding: 40px 0;
+}
+
+.quote-card {
+    background: #FFF8F0;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.quote-card i {
+    font-size: 2rem;
+    color: #D4A34B;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.quote-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #3E1F0D;
+}
+
+/* ========== SHOP/CART SECTION ========== */
+.shop-section {
+    padding: 40px 0;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.cart-summary {
+    background: #FFF8F0;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #E8DCCC;
+}
+
+.cart-summary h3 {
+    margin-bottom: 20px;
+    color: #8B0000;
+}
+
+.cart-items {
+    min-height: 150px;
+    max-height: 350px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px;
+    color: #8B6340;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #D4C0A8;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.item-name {
+    flex: 1;
+    min-width: 140px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    padding: 4px 12px;
+    border-radius: 40px;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 1px solid #8B0000;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #8B0000;
+}
+
+.qty-btn:hover {
+    background: #8B0000;
+    color: white;
+}
+
+.item-qty {
+    min-width: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.6;
+    padding: 5px;
+}
+
+.remove-btn:hover {
+    opacity: 1;
+}
+
+.item-total-price {
+    font-weight: 600;
+    color: #4CAF50;
+    min-width: 80px;
+    text-align: right;
+}
+
+.cart-total {
+    text-align: right;
+    padding-top: 15px;
+    border-top: 2px solid #D4C0A8;
+    font-size: 1.2rem;
+}
+
+.delivery-note {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.checkout-form {
+    background: #FFF8F0;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #E8DCCC;
+}
+
+.checkout-form h3 {
+    margin-bottom: 20px;
+    color: #8B0000;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #D4C0A8;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-row-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+}
+
+.shop-item {
+    background: #FFF8F0;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E8DCCC;
+}
+
+.shop-item span:first-child {
+    font-weight: 500;
+}
+
+.add-to-cart-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.add-to-cart-btn:hover {
+    background: #388E3C;
+    transform: scale(0.96);
 }
 
 /* ========== CONTACT SECTION ========== */
@@ -1083,7 +1433,8 @@ button:hover {
 
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 900px) {
-    .desktop-nav, .btn-order {
+    .desktop-nav,
+    .btn-order {
         display: none;
     }
     .mobile-menu-btn {
@@ -1095,11 +1446,47 @@ button:hover {
     .contact-cards {
         grid-template-columns: repeat(2, 1fr);
     }
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
     .payment-wrapper, .payment-row {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
+    .menu-category-nav {
+        gap: 8px;
+    }
+    .menu-cat-btn {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+    .menu-cat-btn i {
+        font-size: 0.75rem;
+    }
+    .menu-category-header {
+        padding: 10px 16px;
+    }
+    .menu-category-title {
+        font-size: 1rem;
+    }
     .menu-items-grid {
         grid-template-columns: 1fr;
+        padding: 12px;
+    }
+    .menu-item {
+        padding: 8px 12px;
+    }
+    .menu-item span:first-child {
+        font-size: 0.85rem;
     }
 }
 
@@ -1110,6 +1497,9 @@ button:hover {
     .form-row {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+    .form-row-small {
+        grid-template-columns: 1fr;
     }
     .stats {
         flex-direction: column;
@@ -1130,6 +1520,9 @@ button:hover {
     .cards-grid {
         grid-template-columns: 1fr;
     }
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
     .category-container {
         gap: 8px;
     }
@@ -1143,11 +1536,5 @@ button:hover {
         font-size: 25px;
         bottom: 20px;
         right: 20px;
-    }
-    .menu-category {
-        padding: 15px;
-    }
-    .menu-category-title {
-        font-size: 1.2rem;
     }
 }
