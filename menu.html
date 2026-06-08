@@ -2,8 +2,10 @@
 <html lang="am">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ምናሌ | ማኪል ማዕድ | የፍስክ ምግብ ቁርስ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ማኪል ማዕድ - የፍስክ ምግብ ቁርስ | Premium Ethiopian Restaurant in Addis Ababa">
+    <meta name="theme-color" content="#8B0000">
+    <title>ማኪል ማዕድ | የፍስክ ምግብ ቁርስ | Premium Ethiopian Restaurant</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -12,30 +14,51 @@
 <body>
 
 <div class="page-transition"></div>
-<a href="https://wa.me/251974956864" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span class="whatsapp-tooltip">በዋትስአፕ ያዝዙ</span></a>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/251974956864?text=ሰላም%20ማኪል%20ማዕድ%2C%20ማዘዝ%20እፈልጋለሁ" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">በዋትስአፕ ያዝዙ</span>
+</a>
+
+<!-- Mobile Sidebar -->
 <div class="mobile-sidebar" id="mobileSidebar">
-    <div class="sidebar-header"><h3>🍛 ማኪል ማዕድ</h3><button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button></div>
+    <div class="sidebar-header">
+        <h3>🍛 ማኪል ማዕድ</h3>
+        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+    </div>
     <div class="sidebar-nav">
-        <a href="index.html"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        <a href="index.html" class="active"><i class="fas fa-home"></i> ዋና ገጽ</a>
         <a href="about.html"><i class="fas fa-heart"></i> ስለእኛ</a>
-        <a href="menu.html" class="active"><i class="fas fa-utensils"></i> ምናሌ</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> ምናሌ</a>
+        <a href="catering.html"><i class="fas fa-champagne-glasses"></i> የዝግጅት</a>
         <a href="order.html"><i class="fas fa-shopping-bag"></i> ማዘዣ</a>
         <a href="contact.html"><i class="fas fa-map-pin"></i> አድራሻ</a>
     </div>
     <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
-    <div class="sidebar-footer"><p><i class="fas fa-phone"></i> 0974 956864</p></div>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-phone-alt"></i> 0974 956864</p>
+        <p><i class="fas fa-envelope"></i> makilmead@gmail.com</p>
+        <p><i class="fas fa-location-dot"></i> አዲስ አበባ፣ ኢትዮጵያ</p>
+    </div>
 </div>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
+<!-- Header -->
 <header class="main-header">
     <div class="container">
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-        <div class="logo"><a href="index.html"><h1>🍛 ማኪል ማዕድ</h1><span>የፍስክ ምግብ ቁርስ</span></a></div>
+        <div class="logo">
+            <a href="index.html">
+                <h1>🍛 ማኪል ማዕድ</h1>
+                <span>የፍስክ ምግብ ቁርስ</span>
+            </a>
+        </div>
         <nav class="desktop-nav">
-            <a href="index.html">ዋና ገጽ</a>
+            <a href="index.html" class="active">ዋና ገጽ</a>
             <a href="about.html">ስለእኛ</a>
-            <a href="menu.html" class="active">ምናሌ</a>
+            <a href="menu.html">ምናሌ</a>
+            <a href="catering.html">የዝግጅት</a>
             <a href="order.html">ማዘዣ</a>
             <a href="contact.html">አድራሻ</a>
         </nav>
@@ -43,217 +66,167 @@
     </div>
 </header>
 
+<!-- Main Content -->
 <main>
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
         <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=800&fit=crop');"></div>
         <div class="hero-overlay-brighter"></div>
         <div class="container hero-content">
-            <h1>ምናሌ</h1>
-            <p>ባህላዊ የኢትዮጵያ ምግቦች</p>
+            <h1>የፍስክ ምግብ <span class="highlight">ቁርስ</span> 🍛</h1>
+            <p>ባህላዊ የኢትዮጵያ ምግብ በልዩ ጣዕም</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="hero-btn">ምናሌ ይመልከቱ →</a>
+                <a href="order.html" class="hero-btn-secondary">አሁን ያዝዙ</a>
+            </div>
         </div>
     </section>
 
-    <section class="container">
-        <div class="category-wrapper">
-            <div class="category-container">
-                <button class="cat-btn active" data-cat="all"><i class="fas fa-utensils"></i><span>ሁሉም</span></button>
-                <button class="cat-btn" data-cat="breakfast"><i class="fas fa-sun"></i><span>የፍስክ ቁርስ</span></button>
-                <button class="cat-btn" data-cat="lunch"><i class="fas fa-utensil-spoon"></i><span>ምሳ & እራት</span></button>
-                <button class="cat-btn" data-cat="fasting"><i class="fas fa-leaf"></i><span>የጾም ቁርስ</span></button>
-                <button class="cat-btn" data-cat="fasting-lunch"><i class="fas fa-leaf"></i><span>የጾም ምሳ/እራት</span></button>
-                <button class="cat-btn" data-cat="drinks"><i class="fas fa-coffee"></i><span>መጠጦች</span></button>
-                <button class="cat-btn" data-cat="extra"><i class="fas fa-plus-circle"></i><span>ተጨማሪ</span></button>
+    <!-- Category Filters -->
+    <div class="category-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="category-container">
+            <button class="cat-btn active" data-cat="all"><i class="fas fa-utensils"></i><span>ሁሉም</span></button>
+            <button class="cat-btn" data-cat="breakfast"><i class="fas fa-sun"></i><span>ቁርስ</span></button>
+            <button class="cat-btn" data-cat="lunch"><i class="fas fa-utensil-spoon"></i><span>ምሳ & እራት</span></button>
+            <button class="cat-btn" data-cat="fasting"><i class="fas fa-leaf"></i><span>የጾም</span></button>
+        </div>
+    </div>
+
+    <!-- Featured Items - ልዩ ምግቦቻችን (with YOUR images) -->
+    <section class="container" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="section-title">🍛 ልዩ ምግቦቻችን</h2>
+        <div class="cards-grid">
+            <!-- Special Dish 1 - Kitfo -->
+            <div class="product-card" data-cat="lunch">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/190205205048-kitfo%20(1).jpg" class="card-image" alt="ኪትፎ">
+                <div class="card-content">
+                    <div class="card-badge">ተወዳጅ</div>
+                    <h3>ማኪል ጨጨብሳ</h3>
+                    <p>ልዩ ጨጨብሳ በማኪል ዘዴ</p>
+                    <div class="price">ብር 420</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            
+            <!-- Special Dish 2 - Ethiopian Cuisine -->
+            <div class="product-card" data-cat="lunch">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/vibrant-presentation-traditional-ethiopian-cuisine-600w-2612399129.jpg" class="card-image" alt="ማህበራዊ">
+                <div class="card-content">
+                    <div class="card-badge">ልዩ</div>
+                    <h3>ማህበራዊ</h3>
+                    <p>የተለያዩ ምግቦች ስብስብ</p>
+                    <div class="price">ብር 600</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            
+            <!-- Special Dish 3 - ggggh image -->
+            <div class="product-card" data-cat="fasting">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/ggggh.jpeg" class="card-image" alt="የያም ኮምቦ">
+                <div class="card-content">
+                    <h3>የያም ኮምቦ</h3>
+                    <p>ለጾም ተመራጭ ምግቦች</p>
+                    <div class="price">ብር 650</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            
+            <!-- Special Dish 4 - ghfgh image -->
+            <div class="product-card" data-cat="lunch">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/ghfgh.jpeg" class="card-image" alt="ማኪል ኮምቦ">
+                <div class="card-content">
+                    <h3>ማኪል ኮምቦ</h3>
+                    <p>ለቤተሰብ ተመራጭ የምግብ ስብስብ</p>
+                    <div class="price">ብር 2500</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            
+            <!-- Special Dish 5 - hggghg image -->
+            <div class="product-card" data-cat="lunch">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/hggghg.jpeg" class="card-image" alt="የብግ ጥብስ">
+                <div class="card-content">
+                    <h3>የብግ ጥብስ</h3>
+                    <p>ጥሩ ቅመም ያለው የበግ ጥብስ</p>
+                    <div class="price">ብር 470</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            
+            <!-- Special Dish 6 - Ethiopian Cuisine (duplicate for variety) -->
+            <div class="product-card" data-cat="lunch">
+                <img src="https://raw.githubusercontent.com/Addis477/makilcafe/120288533d6d04d981d743a69bc507819062f68a/vibrant-presentation-traditional-ethiopian-cuisine-600w-2612399129.jpg" class="card-image" alt="ቅቅል">
+                <div class="card-content">
+                    <h3>ቅቅል</h3>
+                    <p>በስጋ የተዘጋጀ ልዩ ወጥ</p>
+                    <div class="price">ብር 400</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="menu-sections">
-            <!-- ========== የፍስክ ምግብ ቁርስ ========== -->
-            <div class="menu-category" data-cat="breakfast">
-                <h3 class="menu-category-title">🍳 የፍስክ ምግብ ቁርስ</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ዳስት</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>እንቀላለ ፍርፍር</span><span>ብር 275</span></div>
-                    <div class="menu-item"><span>እንቀላለ ሳንዳች</span><span>ብር 210</span></div>
-                    <div class="menu-item"><span>እንቀላለ በስጋ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>መኮሮኒ በስጋ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ቡላ</span><span>ብር 330</span></div>
-                    <div class="menu-item"><span>ቡላ በእንቀላለ</span><span>ብር 370</span></div>
-                    <div class="menu-item"><span>ፋል በእንቀላለ</span><span>ብር 250</span></div>
-                    <div class="menu-item"><span>ፋዝ በስጋ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ስፔሻል ጨጨብሳ</span><span>ብር 320</span></div>
-                    <div class="menu-item"><span>ማኪል ጨጨብሳ</span><span>ብር 420</span></div>
-                    <div class="menu-item"><span>ስፔሻል ፋል</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ስፔሻል ፋዝ</span><span>ብር 415</span></div>
-                    <div class="menu-item"><span>ፈታ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ስፔሻል ፈታ</span><span>ብር 450</span></div>
-                    <div class="menu-item"><span>እንቀላለ ስልስ</span><span>ብር 275</span></div>
-                    <div class="menu-item"><span>ቂንጩ በስጋ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ስፔሻል ቂንጩ</span><span>ብር 415</span></div>
+    <!-- Bank & Telebirr Section -->
+    <section class="payment-section" data-aos="fade-up">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-info">
+                    <i class="fas fa-university"></i>
+                    <h3>የባንክ መለያ</h3>
+                    <p>አዋሽ ባንክ</p>
+                    <p class="account-number">0135274695001</p>
+                    <p>ስም: ማኪል ማዕድ ትሬዲንግ</p>
+                </div>
+                <div class="payment-info">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>ቴሌ ብር</h3>
+                    <p>በቴሌ ብር መክፈል ይችላሉ</p>
+                    <p class="account-number">0974 956864</p>
+                    <p>ወይም በአፕሊኬሽኑ ይፈልጉ</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ========== የፍስክ ምግብ ምሳ እና እራት ========== -->
-            <div class="menu-category" data-cat="lunch">
-                <h3 class="menu-category-title">🍲 የፍስክ ምግብ ምሳ እና እራት</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ቅቅል</span><span>ብር 400</span></div>
-                    <div class="menu-item"><span>የብግ ጥብስ</span><span>ብር 470</span></div>
-                    <div class="menu-item"><span>የብግ ወጥ</span><span>ብር 430</span></div>
-                    <div class="menu-item"><span>ጎመን በስጋ</span><span>ብር 400</span></div>
-                    <div class="menu-item"><span>ምንችት በቀዩ</span><span>ብር 400</span></div>
-                    <div class="menu-item"><span>ምንችት በሌለጫ</span><span>ብር 380</span></div>
-                    <div class="menu-item"><span>ምስር በስጋ</span><span>ብር 370</span></div>
-                    <div class="menu-item"><span>ጥብስ ፍርፍር</span><span>ብር 330</span></div>
-                    <div class="menu-item"><span>ቋንጣ ፍርፍር</span><span>ብር 450</span></div>
-                    <div class="menu-item"><span>ድርቆሽ በስጋ</span><span>ብር 420</span></div>
-                    <div class="menu-item"><span>ድርቆሽ በቋንጣ</span><span>ብር 480</span></div>
-                    <div class="menu-item"><span>ድርቆሽ በቅቡ</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>በዘና ሽሮ</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>ፓስታ በስጋ</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ማህበራዊ</span><span>ብር 600</span></div>
-                    <div class="menu-item"><span>ማኪል ኮምቦ</span><span>ብር 2500</span></div>
-                    <div class="menu-item"><span>ግማሽ ግማሽ(የፍስክ)</span><span>ብር 550</span></div>
-                    <div class="menu-item"><span>ሽሮ በቅቡ</span><span>ብር 290</span></div>
-                    <div class="menu-item"><span>ማኪል ፍርፍር መሉ</span><span>ብር 1200</span></div>
-                    <div class="menu-item"><span>ማኪል ፍርፍር ግማሽ</span><span>ብር 900</span></div>
-                    <div class="menu-item"><span>ዋርማል ከትፎ</span><span>ብር 470</span></div>
-                    <div class="menu-item"><span>እስፔሻል ከትፎ</span><span>ብር 1200</span></div>
-                    <div class="menu-item"><span>ብርቄ (ቋንጣ ፍርፍር፣ ሥጋ ፍርፍር፣ ዱላት)</span><span>ብር 1500</span></div>
-                    <div class="menu-item"><span>ግማስ (ቅቅል፣ ቀይወጥ፣ ዱላት፣ ጎመን በስጋ፣ አይብ፣ ጎመን ከትፎ)</span><span>ብር 1700</span></div>
-                    <div class="menu-item"><span>አባል (ዱላት ለብለብ እና ዱላት የበሰለ፣ ጎመን በስጋ፣ አይብ)</span><span>ብር 1700</span></div>
-                </div>
-            </div>
-
-            <!-- ========== የጾም ቁርስ ========== -->
-            <div class="menu-category" data-cat="fasting">
-                <h3 class="menu-category-title">🌿 የጾም ቁርስ</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>የርማል ፋል</span><span>ብር 210</span></div>
-                    <div class="menu-item"><span>ፋል በአሸካይ</span><span>ብር 260</span></div>
-                    <div class="menu-item"><span>ፋል በፋዝ</span><span>ብር 260</span></div>
-                    <div class="menu-item"><span>ጨጨብሳ በፍርኖ ዱቄት</span><span>ብር 210</span></div>
-                    <div class="menu-item"><span>ጨጨብሳ በጤፍ ዱቄት</span><span>ብር 230</span></div>
-                    <div class="menu-item"><span>ጨጨብሳ በማር</span><span>ብር 240</span></div>
-                    <div class="menu-item"><span>የያም አስፔሻል ጨጨብሳ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>እንጀራ ፍርፍር</span><span>ብር 250</span></div>
-                    <div class="menu-item"><span>ዳቦ ፍርፍር</span><span>ብር 250</span></div>
-                    <div class="menu-item"><span>ፋዝ በአትክልት</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>መካረኒ በስጎ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>መካረኒ በአትክልት</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ፓስታ በስጎ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ፓስታ በአትክልት</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>አትክልት ሳንዱች</span><span>ብር 210</span></div>
-                    <div class="menu-item"><span>አትክልት ፍርፍር</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>ፋዝ በአሸካይ</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>ፋዝ በስልስ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ቅንጠይ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>በሳ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ቁርስ ኮምቦ</span><span>ብር 550</span></div>
-                </div>
-            </div>
-
-            <!-- ========== የጾም ምሳ እና እራት ========== -->
-            <div class="menu-category" data-cat="fasting-lunch">
-                <h3 class="menu-category-title">🌱 የጾም ምሳ እና እራት</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ተጋቢኖ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ምስር</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>በየአይነት የርማል</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>በየአይነት አስፔሻል</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ሱፍ ፍትፍት</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ቲማቲም ለብለብ/ ቁርጥ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ተልባ ፍትፍት</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ማኪል ፍርፍር መሉ</span><span>ብር 700</span></div>
-                    <div class="menu-item"><span>ማኪል ፍርፍር ግማሽ</span><span>ብር 600</span></div>
-                    <div class="menu-item"><span>ሽሮ</span><span>ብር 250</span></div>
-                    <div class="menu-item"><span>አስፔሻል ሽሮ</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>ድርቆሽ</span><span>ብር 310</span></div>
-                    <div class="menu-item"><span>ጎመን ክትድ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ጎመን ጥበስ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ሠላጣ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ቆስጣ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ሽምብራ ፍርፍር</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>ግማሽ ግማሽ (በድርቆሽ)</span><span>ብር 375</span></div>
-                    <div class="menu-item"><span>ግማሽ ግማሽ</span><span>ብር 350</span></div>
-                    <div class="menu-item"><span>አገልግል መሉ</span><span>ብር 700</span></div>
-                    <div class="menu-item"><span>አገልግል ግማሽ</span><span>ብር 500</span></div>
-                    <div class="menu-item"><span>ቲማቲም ስልስ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>የያም ኮምቦ</span><span>ብር 650</span></div>
-                    <div class="menu-item"><span>ሽምብራ አሳ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>አትክልት ሳላድ</span><span>ብር 350</span></div>
-                </div>
-            </div>
-
-            <!-- ========== ለስላሳ መጠጥ ========== -->
-            <div class="menu-category" data-cat="drinks">
-                <h3 class="menu-category-title">🥤 ለስላሳ መጠጥ</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ለስላሳ</span><span>ብር 70</span></div>
-                    <div class="menu-item"><span>አምባ ውሃ</span><span>ብር 70</span></div>
-                    <div class="menu-item"><span>1/2 ሊትር</span><span>ብር 50</span></div>
-                    <div class="menu-item"><span>1 ሊትር</span><span>ብር 60</span></div>
-                    <div class="menu-item"><span>2 ሊትር</span><span>ብር 70</span></div>
-                </div>
-            </div>
-
-            <!-- ========== ትኩስ መጠጥ ========== -->
-            <div class="menu-category" data-cat="drinks">
-                <h3 class="menu-category-title">☕ ትኩስ መጠጥ</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ሻይ</span><span>ብር 30</span></div>
-                    <div class="menu-item"><span>በና</span><span>ብር 40</span></div>
-                    <div class="menu-item"><span>ቀሸር</span><span>ብር 30</span></div>
-                    <div class="menu-item"><span>አስፔራስ</span><span>ብር 40</span></div>
-                </div>
-            </div>
-
-            <!-- ========== ማሪ (ተጨማሪ) ========== -->
-            <div class="menu-category" data-cat="extra">
-                <h3 class="menu-category-title">🍞 ማሪ (ተጨማሪ)</h3>
-                <div class="menu-items-grid">
-                    <div class="menu-item"><span>ግማሽ አንጅራ</span><span>ብር 25</span></div>
-                    <div class="menu-item"><span>ሙሉ አንጅራ</span><span>ብር 40</span></div>
-                    <div class="menu-item"><span>ዳቦ</span><span>ብር 25</span></div>
-                    <div class="menu-item"><span>አይብ</span><span>ብር 70</span></div>
-                    <div class="menu-item"><span>ማር</span><span>ብር 30</span></div>
-                    <div class="menu-item"><span>አንቀላል</span><span>ብር 40</span></div>
-                    <div class="menu-item"><span>ቆጮ</span><span>ብር 50</span></div>
-                    <div class="menu-item"><span>ካቻጥ ጭማሪ</span><span>ብር 30</span></div>
-                    <div class="menu-item"><span>አቮካዶ</span><span>ብር 50</span></div>
-                    <div class="menu-item"><span>ችፕስ</span><span>ብር 180</span></div>
-                    <div class="menu-item"><span>አቮካዶ ሳንዱች</span><span>ብር 150</span></div>
-                    <div class="menu-item"><span>ተልባ ጁስ</span><span>ብር 300</span></div>
-                    <div class="menu-item"><span>አርጥብ</span><span>ብር 130</span></div>
-                    <div class="menu-item"><span>አርጥብ ባካታጥ</span><span>ብር 160</span></div>
-                    <div class="menu-item"><span>አርጥብ በአቮካዶ</span><span>ብር 180</span></div>
-                    <div class="menu-item"><span>አርጥብ በአንቀላል</span><span>ብር 170</span></div>
-                    <div class="menu-item"><span>እስፔሻል አርጥብ</span><span>ብር 250</span></div>
-                </div>
+    <!-- Features Section -->
+    <section class="features-section" data-aos="fade-up">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card"><i class="fas fa-fire"></i><h3>ትኩስ ምግብ</h3><p>በየቀኑ የሚዘጋጅ</p></div>
+                <div class="feature-card"><i class="fas fa-truck"></i><h3>ነጻ ማድረስ</h3><p>ከ1000 ብር በላይ</p></div>
+                <div class="feature-card"><i class="fas fa-clock"></i><h3>ፈጣን አገልግሎት</h3><p>በ30 ደቂቃ ውስጥ</p></div>
+                <div class="feature-card"><i class="fas fa-star"></i><h3>ልዩ ጣዕም</h3><p>ባህላዊ ቅመም</p></div>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="main-footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo">🍛 ማኪል ማዕድ</div><p class="tagline">የፍስክ ምግብ ቁርስ</p></div><div class="footer-col"><h4>ፈጣን አገናኝ</h4><ul><li><a href="index.html">ዋና ገጽ</a></li><li><a href="menu.html">ምናሌ</a></li><li><a href="order.html">ማዘዣ</a></li></ul></div><div class="footer-col"><h4>ደውሉልን</h4><ul><li><i class="fas fa-phone"></i> 0974 956864</li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 ማኪል ማዕድ — የፍስክ ምግብ ቁርስ 🍛</p></div></div></footer>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo">🍛 ማኪል ማዕድ</div><p class="tagline">የፍስክ ምግብ ቁርስ</p><p>Premium Ethiopian Restaurant<br>አዲስ አበባ፣ ኢትዮጵያ</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-telegram-plane"></i></a></div></div>
+            <div class="footer-col"><h4>ፈጣን አገናኝ</h4><ul><li><a href="index.html">ዋና ገጽ</a></li><li><a href="about.html">ስለእኛ</a></li><li><a href="menu.html">ምናሌ</a></li><li><a href="catering.html">የዝግጅት</a></li><li><a href="order.html">ማዘዣ</a></li><li><a href="contact.html">አድራሻ</a></li></ul></div>
+            <div class="footer-col"><h4>የስራ ሰዓት</h4><ul><li>ሰኞ - ቅዳሜ</li><li><strong>7:00 AM - 10:00 PM</strong></li><li>እሁድ</li><li><strong>8:00 AM - 9:00 PM</strong></li></ul></div>
+            <div class="footer-col"><h4>ደውሉልን</h4><ul class="contact-info"><li><i class="fas fa-phone"></i> 0974 956864</li><li><i class="fas fa-envelope"></i> makilmead@gmail.com</li><li><i class="fas fa-map-marker-alt"></i> አዲስ አበባ</li></ul><div class="payment-badge"><span>የምንቀበል</span><i class="fas fa-money-bill-wave"></i><i class="fas fa-mobile-alt"></i><i class="fas fa-university"></i></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 ማኪል ማዕድ — የፍስክ ምግብ ቁርስ | አዲስ አበባ፣ ኢትዮጵያ</p><p class="footer-heart">✨ ባህላዊ ጣዕም በዘመናዊ አገልግሎት ✨</p></div>
+    </div>
+</footer>
 
 <div id="toastMsg" class="toast-msg">✓ ወደ ጋሪ ተጨምሯል</div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
 <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: true, offset: 100 });
     document.querySelectorAll('.cat-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             const cat = this.getAttribute('data-cat');
-            if (cat === 'all') {
-                document.querySelectorAll('.menu-category').forEach(catDiv => catDiv.style.display = 'block');
-            } else {
-                document.querySelectorAll('.menu-category').forEach(catDiv => {
-                    if (catDiv.getAttribute('data-cat') === cat) catDiv.style.display = 'block';
-                    else catDiv.style.display = 'none';
-                });
-            }
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? 'block' : 'none';
+            });
         });
     });
 </script>
