@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ማኪል ማዕድ - የፍስክ ምግብ ቁርስ | Premium Ethiopian Restaurant in Addis Ababa">
+    <meta name="theme-color" content="#8B0000">
+    <title>ማኪል ማዕድ | የፍስክ ምግብ ቁርስ | Premium Ethiopian Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-transition"></div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/251974956864?text=ሰላም%20ማኪል%20ማዕድ%2C%20ማዘዝ%20እፈልጋለሁ" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">በዋትስአፕ ያዝዙ</span>
+</a>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+        <h3>🍛 ማኪል ማዕድ</h3>
+        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sidebar-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        <a href="about.html"><i class="fas fa-heart"></i> ስለእኛ</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> ምናሌ</a>
+        <a href="order.html"><i class="fas fa-shopping-bag"></i> ማዘዣ</a>
+        <a href="contact.html"><i class="fas fa-map-pin"></i> አድራሻ</a>
+    </div>
+    <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-phone-alt"></i> 0974 956864</p>
+        <p><i class="fas fa-envelope"></i> makilmead@gmail.com</p>
+        <p><i class="fas fa-location-dot"></i> አዲስ አበባ፣ ኢትዮጵያ</p>
+    </div>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Header -->
+<header class="main-header">
+    <div class="container">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <a href="index.html">
+                <h1>🍛 ማኪል ማዕድ</h1>
+                <span>የፍስክ ምግብ ቁርስ</span>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html" class="active">ዋና ገጽ</a>
+            <a href="about.html">ስለእኛ</a>
+            <a href="menu.html">ምናሌ</a>
+            <a href="order.html">ማዘዣ</a>
+            <a href="contact.html">አድራሻ</a>
+        </nav>
+        <a href="order.html" class="btn-order"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=800&fit=crop');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content">
+            <h1>የፍስክ ምግብ <span class="highlight">ቁርስ</span> 🍛</h1>
+            <p>ባህላዊ የኢትዮጵያ ምግብ በልዩ ጣዕም</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="hero-btn">ምናሌ ይመልከቱ →</a>
+                <a href="order.html" class="hero-btn-secondary">አሁን ያዝዙ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <div class="category-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="category-container">
+            <button class="cat-btn active" data-cat="all"><i class="fas fa-utensils"></i><span>ሁሉም</span></button>
+            <button class="cat-btn" data-cat="breakfast"><i class="fas fa-sun"></i><span>ቁርስ</span></button>
+            <button class="cat-btn" data-cat="lunch"><i class="fas fa-utensil-spoon"></i><span>ምሳ & እራት</span></button>
+            <button class="cat-btn" data-cat="fasting"><i class="fas fa-leaf"></i><span>የጾም</span></button>
+        </div>
+    </div>
+
+    <!-- Featured Items -->
+    <section class="container" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="section-title">🍛 ልዩ ምግቦቻችን</h2>
+        <div class="cards-grid">
+            <div class="product-card" data-cat="breakfast">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=300&fit=crop" class="card-image">
+                <div class="card-content">
+                    <div class="card-badge">ተወዳጅ</div>
+                    <h3>ማኪል ጨጨብሳ</h3>
+                    <p>ልዩ ጨጨብሳ በማኪል ዘዴ</p>
+                    <div class="price">ብር 420</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            <div class="product-card" data-cat="lunch">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=300&fit=crop" class="card-image">
+                <div class="card-content">
+                    <div class="card-badge">ልዩ</div>
+                    <h3>ማህበራዊ</h3>
+                    <p>የተለያዩ ምግቦች ስብስብ</p>
+                    <div class="price">ብር 600</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            <div class="product-card" data-cat="fasting">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=300&fit=crop" class="card-image">
+                <div class="card-content">
+                    <h3>የያም ኮምቦ</h3>
+                    <p>ለጾም ተመራጭ ምግቦች</p>
+                    <div class="price">ብር 650</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+            <div class="product-card" data-cat="lunch">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=300&fit=crop" class="card-image">
+                <div class="card-content">
+                    <h3>ማኪል ኮምቦ</h3>
+                    <p>ለቤተሰብ ተመራጭ የምግብ ስብስብ</p>
+                    <div class="price">ብር 2500</div>
+                    <a href="order.html" class="shop-now-btn">አሁን ያዝዙ →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank & Telebirr Section -->
+    <section class="payment-section" data-aos="fade-up">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-info">
+                    <i class="fas fa-university"></i>
+                    <h3>የባንክ መለያ</h3>
+                    <p>አዋሽ ባንክ</p>
+                    <p class="account-number">0135274695001</p>
+                    <p>ስም: ማኪል ማዕድ ትሬዲንግ</p>
+                </div>
+                <div class="payment-info">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>ቴሌ ብር</h3>
+                    <p>በቴሌ ብር መክፈል ይችላሉ</p>
+                    <p class="account-number">0974 956864</p>
+                    <p>ወይም በአፕሊኬሽኑ ይፈልጉ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" data-aos="fade-up">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card"><i class="fas fa-fire"></i><h3>ትኩስ ምግብ</h3><p>በየቀኑ የሚዘጋጅ</p></div>
+                <div class="feature-card"><i class="fas fa-truck"></i><h3>ነጻ ማድረስ</h3><p>ከ1000 ብር በላይ</p></div>
+                <div class="feature-card"><i class="fas fa-clock"></i><h3>ፈጣን አገልግሎት</h3><p>በ30 ደቂቃ ውስጥ</p></div>
+                <div class="feature-card"><i class="fas fa-star"></i><h3>ልዩ ጣዕም</h3><p>ባህላዊ ቅመም</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo">🍛 ማኪል ማዕድ</div><p class="tagline">የፍስክ ምግብ ቁርስ</p><p>Premium Ethiopian Restaurant<br>አዲስ አበባ፣ ኢትዮጵያ</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-telegram-plane"></i></a></div></div>
+            <div class="footer-col"><h4>ፈጣን አገናኝ</h4><ul><li><a href="index.html">ዋና ገጽ</a></li><li><a href="about.html">ስለእኛ</a></li><li><a href="menu.html">ምናሌ</a></li><li><a href="order.html">ማዘዣ</a></li><li><a href="contact.html">አድራሻ</a></li></ul></div>
+            <div class="footer-col"><h4>የስራ ሰዓት</h4><ul><li>ሰኞ - ቅዳሜ</li><li><strong>7:00 AM - 10:00 PM</strong></li><li>እሁድ</li><li><strong>8:00 AM - 9:00 PM</strong></li></ul></div>
+            <div class="footer-col"><h4>ደውሉልን</h4><ul class="contact-info"><li><i class="fas fa-phone"></i> 0974 956864</li><li><i class="fas fa-envelope"></i> makilmead@gmail.com</li><li><i class="fas fa-map-marker-alt"></i> አዲስ አበባ</li></ul><div class="payment-badge"><span>የምንቀበል</span><i class="fas fa-money-bill-wave"></i><i class="fas fa-mobile-alt"></i><i class="fas fa-university"></i></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 ማኪል ማዕድ — የፍስክ ምግብ ቁርስ | አዲስ አበባ፣ ኢትዮጵያ</p><p class="footer-heart">✨ ባህላዊ ጣዕም በዘመናዊ አገልግሎት ✨</p></div>
+    </div>
+</footer>
+
+<div id="toastMsg" class="toast-msg">✓ ወደ ጋሪ ተጨምሯል</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const cat = this.getAttribute('data-cat');
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? 'block' : 'none';
+            });
+        });
+    });
+</script>
+</body>
+</html>
