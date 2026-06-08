@@ -62,29 +62,15 @@
     </section>
 
     <section class="container">
-        <!-- HORIZONTAL CATEGORY BUTTONS - NORMAL SIZE -->
-        <div class="menu-category-nav">
-            <button class="menu-cat-btn active" data-cat="all">
-                <i class="fas fa-utensils"></i> ሁሉም
-            </button>
-            <button class="menu-cat-btn" data-cat="breakfast">
-                <i class="fas fa-sun"></i> የፍስክ ቁርስ
-            </button>
-            <button class="menu-cat-btn" data-cat="lunch">
-                <i class="fas fa-utensil-spoon"></i> ምሳ & እራት
-            </button>
-            <button class="menu-cat-btn" data-cat="fasting">
-                <i class="fas fa-leaf"></i> የጾም ቁርስ
-            </button>
-            <button class="menu-cat-btn" data-cat="fasting-lunch">
-                <i class="fas fa-leaf"></i> የጾም ምሳ/እራት
-            </button>
-            <button class="menu-cat-btn" data-cat="drinks">
-                <i class="fas fa-coffee"></i> መጠጦች
-            </button>
-            <button class="menu-cat-btn" data-cat="extra">
-                <i class="fas fa-plus-circle"></i> ተጨማሪ
-            </button>
+        <!-- SIMPLE CATEGORY NAVIGATION - TEXT ONLY -->
+        <div class="simple-category-nav">
+            <button class="simple-cat-btn active" data-cat="all">ሁሉም</button>
+            <button class="simple-cat-btn" data-cat="breakfast">የፍስክ ቁርስ</button>
+            <button class="simple-cat-btn" data-cat="lunch">ምሳ & እራት</button>
+            <button class="simple-cat-btn" data-cat="fasting">የጾም ቁርስ</button>
+            <button class="simple-cat-btn" data-cat="fasting-lunch">የጾም ምሳ/እራት</button>
+            <button class="simple-cat-btn" data-cat="drinks">መጠጦች</button>
+            <button class="simple-cat-btn" data-cat="extra">ተጨማሪ</button>
         </div>
 
         <div class="menu-sections">
@@ -293,13 +279,13 @@
 <script>
     AOS.init({ duration: 800, once: true });
     
-    // Horizontal Category Filter for Menu Page
-    const menuCatBtns = document.querySelectorAll('.menu-cat-btn');
+    // Simple Category Filter for Menu Page
+    const simpleCatBtns = document.querySelectorAll('.simple-cat-btn');
     const menuCategories = document.querySelectorAll('.menu-category');
     
-    menuCatBtns.forEach(btn => {
+    simpleCatBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            menuCatBtns.forEach(b => b.classList.remove('active'));
+            simpleCatBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             const cat = this.getAttribute('data-cat');
             if (cat === 'all') {
