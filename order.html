@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ማኪል ማዕድ - ምግብ ማዘዝ፣ በቀጥታ ወደ ቤትዎ ማድረስ">
+    <meta name="theme-color" content="#8B0000">
+    <title>ማዘዣ | ማኪል ማዕድ | የፍስክ ምግብ ቁርስ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-transition"></div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/251974956864?text=ሰላም%20ማኪል%20ማዕድ%2C%20ማዘዝ%20እፈልጋለሁ" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">በዋትስአፕ ያዝዙ</span>
+</a>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar" id="mobileSidebar">
+    <div class="sidebar-header">
+        <h3>🍛 ማኪል ማዕድ</h3>
+        <button class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sidebar-nav">
+        <a href="index.html"><i class="fas fa-home"></i> ዋና ገጽ</a>
+        <a href="about.html"><i class="fas fa-heart"></i> ስለእኛ</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> ምናሌ</a>
+        <a href="catering.html"><i class="fas fa-champagne-glasses"></i> የዝግጅት</a>
+        <a href="order.html" class="active"><i class="fas fa-shopping-bag"></i> ማዘዣ</a>
+        <a href="contact.html"><i class="fas fa-map-pin"></i> አድራሻ</a>
+    </div>
+    <a href="order.html" class="sidebar-order-btn"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-phone-alt"></i> 0974 956864</p>
+        <p><i class="fas fa-envelope"></i> makilmead@gmail.com</p>
+    </div>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Header -->
+<header class="main-header">
+    <div class="container">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="logo">
+            <a href="index.html">
+                <h1>🍛 ማኪል ማዕድ</h1>
+                <span>የፍስክ ምግብ ቁርስ</span>
+            </a>
+        </div>
+        <nav class="desktop-nav">
+            <a href="index.html">ዋና ገጽ</a>
+            <a href="about.html">ስለእኛ</a>
+            <a href="menu.html">ምናሌ</a>
+            <a href="catering.html">የዝግጅት</a>
+            <a href="order.html" class="active">ማዘዣ</a>
+            <a href="contact.html">አድራሻ</a>
+        </nav>
+        <a href="order.html" class="btn-order"><i class="fas fa-shopping-cart"></i> አሁን ያዝዙ</a>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+        <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?w=1920&h=800&fit=crop');"></div>
+        <div class="hero-overlay-brighter"></div>
+        <div class="container hero-content">
+            <h1>ማዘዣ</h1>
+            <p>በቀጥታ ወደ ቤትዎ እናደርሳለን</p>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="shop-section" data-aos="fade-up">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>የእርስዎ ጋሪ <span id="cartCount">(0 items)</span></h3>
+                    <div id="cartItems" class="cart-items">
+                        <div class="empty-cart">🛒 ጋሪዎ ባዶ ነው</div>
+                    </div>
+                    <div class="cart-total">
+                        <strong>ጠቅላላ:</strong> <strong id="cartTotal">ETB 0</strong>
+                    </div>
+                    <div class="delivery-note">🚚 ከብር 1,000 በላይ ለሆነ ትእዛዝ ነጻ ማድረስ</div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <h3>የመላኪያ መረጃ</h3>
+                    <input type="text" id="orderName" placeholder="ሙሉ ስም" required>
+                    <input type="tel" id="orderPhone" placeholder="ስልክ ቁጥር" required>
+                    <input type="email" id="orderEmail" placeholder="ኢሜይል አድራሻ">
+                    <input type="text" id="orderAddress" placeholder="የመላኪያ አድራሻ" required>
+                    <div class="form-row-small">
+                        <select id="orderDate">
+                            <option>ዛሬ</option>
+                            <option>ነገ</option>
+                            <option>ከ2 ቀን በኋላ</option>
+                        </select>
+                        <select id="orderTime">
+                            <option>ጠዋት (8am-12pm)</option>
+                            <option>ከሰዓት (12pm-4pm)</option>
+                            <option>ማታ (4pm-7pm)</option>
+                        </select>
+                    </div>
+                    <textarea rows="2" id="specialInstructions" placeholder="ልዩ መመሪያ (ለምሳሌ: ቅመም አይጨምሩ, ብዙ ሽንኩርት, ወዘተ)"></textarea>
+                    <button id="checkoutBtn">ትእዛዝ አስገባ</button>
+                </div>
+            </div>
+
+            <!-- Products to Add -->
+            <h3 class="section-title-small">ምግብ ይጨምሩ</h3>
+            <div class="items-grid">
+                <div class="shop-item" data-name="ማኪል ጨጨብሳ" data-price="420">
+                    <span>🍛 ማኪል ጨጨብሳ</span>
+                    <span>ብር 420</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ማህበራዊ" data-price="600">
+                    <span>🍲 ማህበራዊ</span>
+                    <span>ብር 600</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ቅቅል" data-price="400">
+                    <span>🍛 ቅቅል</span>
+                    <span>ብር 400</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="የብግ ጥብስ" data-price="470">
+                    <span>🍖 የብግ ጥብስ</span>
+                    <span>ብር 470</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ጎመን በስጋ" data-price="400">
+                    <span>🥬 ጎመን በስጋ</span>
+                    <span>ብር 400</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ስፔሻል ጨጨብሳ" data-price="320">
+                    <span>🍛 ስፔሻል ጨጨብሳ</span>
+                    <span>ብር 320</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ማኪል ኮምቦ" data-price="2500">
+                    <span>🍱 ማኪል ኮምቦ</span>
+                    <span>ብር 2500</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+                <div class="shop-item" data-name="ድርቆሽ በስጋ" data-price="420">
+                    <span>🍛 ድርቆሽ በስጋ</span>
+                    <span>ብር 420</span>
+                    <button class="add-to-cart-btn">+ ጨምር</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo">🍛 ማኪል ማዕድ</div><p class="tagline">የፍስክ ምግብ ቁርስ</p></div>
+            <div class="footer-col"><h4>ፈጣን አገናኝ</h4><ul><li><a href="index.html">ዋና ገጽ</a></li><li><a href="menu.html">ምናሌ</a></li><li><a href="order.html">ማዘዣ</a></li></ul></div>
+            <div class="footer-col"><h4>ደውሉልን</h4><ul><li><i class="fas fa-phone"></i> 0974 956864</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 ማኪል ማዕድ — የፍስክ ምግብ ቁርስ 🍛</p></div>
+    </div>
+</footer>
+
+<div id="toastMsg" class="toast-msg">✓ ወደ ጋሪ ተጨምሯል</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    
+    let cart = [];
+    const FREE_DELIVERY = 1000;
+
+    function updateCart() {
+        const cartDiv = document.getElementById('cartItems');
+        const totalSpan = document.getElementById('cartTotal');
+        const countSpan = document.getElementById('cartCount');
+        if (!cartDiv) return;
+        if (cart.length === 0) {
+            cartDiv.innerHTML = '<div class="empty-cart">🛒 ጋሪዎ ባዶ ነው</div>';
+            if (totalSpan) totalSpan.textContent = 'ETB 0';
+            if (countSpan) countSpan.textContent = '(0 items)';
+            return;
+        }
+        let html = '', total = 0;
+        cart.forEach((item, idx) => {
+            const itemTotal = item.price * item.qty;
+            total += itemTotal;
+            html += `
+                <div class="cart-item">
+                    <span class="item-name"><strong>${escapeHtml(item.name)}</strong></span>
+                    <div class="cart-controls">
+                        <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+                        <span class="item-qty">${item.qty}</span>
+                        <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+                        <button class="remove-btn" onclick="removeItem(${idx})">🗑️</button>
+                    </div>
+                    <span class="item-total-price">ETB ${itemTotal}</span>
+                </div>
+            `;
+        });
+        cartDiv.innerHTML = html;
+        if (totalSpan) totalSpan.textContent = `ETB ${total}`;
+        if (countSpan) countSpan.textContent = `(${cart.reduce((s, i) => s + i.qty, 0)} items)`;
+        const deliveryNote = document.querySelector('.delivery-note');
+        if (deliveryNote) {
+            if (total >= FREE_DELIVERY) { 
+                deliveryNote.innerHTML = '✅ ነጻ ማድረስ!'; 
+                deliveryNote.style.color = '#4CAF50'; 
+            } else { 
+                deliveryNote.innerHTML = `🚚 ከብር ${FREE_DELIVERY - total} ተጨማሪ ለነጻ ማድረስ`; 
+                deliveryNote.style.color = '#8B6340'; 
+            }
+        }
+    }
+
+    window.changeQty = function(idx, delta) { 
+        const newQty = cart[idx].qty + delta; 
+        if (newQty <= 0) cart.splice(idx, 1); 
+        else cart[idx].qty = newQty; 
+        updateCart(); 
+    };
+
+    window.removeItem = function(idx) { 
+        cart.splice(idx, 1); 
+        updateCart(); 
+    };
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const itemDiv = this.closest('.shop-item');
+            const name = itemDiv.getAttribute('data-name');
+            const price = parseInt(itemDiv.getAttribute('data-price'));
+            const existing = cart.find(i => i.name === name);
+            if (existing) existing.qty++;
+            else cart.push({ name, price, qty: 1 });
+            updateCart();
+            showToast(`✓ ${name} ወደ ጋሪ ተጨምሯል`);
+        });
+    });
+
+    document.getElementById('checkoutBtn')?.addEventListener('click', function() {
+        const name = document.getElementById('orderName')?.value.trim();
+        const phone = document.getElementById('orderPhone')?.value.trim();
+        const address = document.getElementById('orderAddress')?.value.trim();
+        if (!name || !phone || !address) { 
+            showToast('⚠️ እባክዎ ሁሉንም መረጃ ይሙሉ'); 
+            return; 
+        }
+        if (cart.length === 0) { 
+            showToast('⚠️ እባክዎ ምግብ ይጨምሩ'); 
+            return; 
+        }
+        const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+        showToast(`✅ እናመሰግናለን ${name}! ትእዛዝዎ (ብር ${total}) ተልኳል። በቅርቡ እንደርስዎታለን።`);
+        cart = [];
+        updateCart();
+        document.getElementById('orderName').value = '';
+        document.getElementById('orderPhone').value = '';
+        document.getElementById('orderEmail').value = '';
+        document.getElementById('orderAddress').value = '';
+        document.getElementById('specialInstructions').value = '';
+    });
+    
+    updateCart();
+</script>
+</body>
+</html>
